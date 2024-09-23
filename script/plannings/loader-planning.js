@@ -9,14 +9,18 @@ async function loadHTML(filePath) {
 }
 
 // Load your modular HTML files
+
+const jsDeliverUrl = 'https://cdn.jsdelivr.net/gh/your-username/your-repo@main/'
 async function loadModularContent() {
-    await loadHTML('html/global/header.html'); // Use forward slashes
-    await loadHTML('html/plannings/combine-sheets.html'); // Use forward slashes
-    await loadHTML('html/global/footer.html'); // Use forward slashes
+    await loadHTML(jsDeliverUrl + 'html/global/header.html'); // Use forward slashes
+    await loadHTML(jsDeliverUrl + 'html/plannings/combine-sheets.html'); // Use forward slashes
+    await loadHTML(jsDeliverUrl + 'html/global/footer.html'); // Use forward slashes
     
     // Load scripts after HTML content is added
     // loadScripts();
 }
+
+import 
 
 // Function to load additional scripts
 function loadScripts() {
