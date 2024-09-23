@@ -24,6 +24,7 @@ async function loadModularContent() {
     // loadScripts();
 }
 
+"https://damoosnz.github.io/fas-appscript/script/planning/loader-planning.js"
 
 
 // Function to load additional scripts
