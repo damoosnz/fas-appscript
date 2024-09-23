@@ -14,11 +14,11 @@ console.log('page init started')
 
 // Load your modular HTML files
 
-const jsDeliverUrl = 'https://cdn.jsdelivr.net/gh/your-username/your-repo@main/'
+const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
 async function loadModularContent() {
-    await loadHTML(jsDeliverUrl + 'html/global/header.html'); // Use forward slashes
-    await loadHTML(jsDeliverUrl + 'html/plannings/combine-sheets.html'); // Use forward slashes
-    await loadHTML(jsDeliverUrl + 'html/global/footer.html'); // Use forward slashes
+    await loadHTML(githubPagesUrl + 'html/global/header.html'); // Use forward slashes
+    await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets.html'); // Use forward slashes
+    await loadHTML(githubPagesUrl + 'html/global/footer.html'); // Use forward slashes
     
     // Load scripts after HTML content is added
     // loadScripts();
