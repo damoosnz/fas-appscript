@@ -29,5 +29,5 @@ function submitSelection() {
     google.script.host.close();
 }
 
-// Load the sheet names when the dialog opens
-window.onload = loadSheets;
+// Load the sheet names 
+loadSheets();

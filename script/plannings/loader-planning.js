@@ -33,8 +33,8 @@ async function loadModularContent() {
 // Function to load additional scripts
 function loadScripts() {
     const script = document.createElement('script');
-    script.src = 'script/plannings/combine-sheets.js'; // Adjust the path as necessary
-    document.body.appendChild(script); // Append the script
+    script.src = 'script/plannings/combine-sheets.js'; // C:\BIMSC\GitHub Clones\fas-appscript\script\plannings\combine-sheets.js
+    document.body.appendChild(script); 
 }
 
 // Call the function when the DOM is fully loaded
