@@ -8,6 +8,10 @@ async function loadHTML(filePath) {
     document.body.innerHTML += html; // Append the HTML
 }
 
+// log the start of the script
+
+console.log('page init started')
+
 // Load your modular HTML files
 
 const jsDeliverUrl = 'https://cdn.jsdelivr.net/gh/your-username/your-repo@main/'
@@ -20,7 +24,7 @@ async function loadModularContent() {
     // loadScripts();
 }
 
-import 
+
 
 // Function to load additional scripts
 function loadScripts() {
