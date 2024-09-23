@@ -12,24 +12,28 @@ async function loadHTML(filePath) {
 
 console.log('page init started')
 
-// Load your modular HTML files
-
 const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
 async function loadModularContent() {
-    await loadHTML(githubPagesUrl + 'html/global/header.html'); // Use forward slashes
-    await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets.html'); // Use forward slashes
-    await loadHTML(githubPagesUrl + 'html/global/footer.html'); // Use forward slashes
+
+    // Load your modular HTML files
+    console.log('html loading started')
+    await loadHTML(githubPagesUrl + 'html/global/header.html'); 
+    await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets.html'); 
+    await loadHTML(githubPagesUrl + 'html/global/footer.html'); 
+    console.log('html loading completed')
     
     // Load scripts after HTML content is added
+    console.log('script loading started')
     loadScripts();
+    console.log('script loading completed')
+
+    console.log('page init completed')
 }
-
-
 
 // Function to load additional scripts
 function loadScripts() {
     const script = document.createElement('script');
-    script.src = './combine-sheets.js'; // Adjust the path as necessary
+    script.src = 'combine-sheets.js'; // Adjust the path as necessary
     document.body.appendChild(script); // Append the script
 }
 
