@@ -21,10 +21,9 @@ async function loadModularContent() {
     await loadHTML(githubPagesUrl + 'html/global/footer.html'); // Use forward slashes
     
     // Load scripts after HTML content is added
-    // loadScripts();
+    loadScripts();
 }
 
-"https://damoosnz.github.io/fas-appscript/script/planning/loader-planning.js"
 
 
 // Function to load additional scripts
