@@ -24,5 +24,5 @@ function loadScripts() {
     document.body.appendChild(script); // Append the script
 }
 
-// Call the function when the page loads
-window.onload = loadModularContent;
+// Call the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', loadModularContent);
