@@ -15,7 +15,7 @@ async function loadModularContent() {
     await loadHTML('html/global/footer.html'); // Use forward slashes
     
     // Load scripts after HTML content is added
-    loadScripts();
+    // loadScripts();
 }
 
 // Function to load additional scripts
