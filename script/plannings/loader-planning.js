@@ -33,7 +33,7 @@ async function loadModularContent() {
 // Function to load additional scripts
 function loadScripts() {
     const script = document.createElement('script');
-    script.src = 'combine-sheets.js'; // Adjust the path as necessary
+    script.src = 'script/plannings/combine-sheets.js'; // Adjust the path as necessary
     document.body.appendChild(script); // Append the script
 }
 
