@@ -1,6 +1,25 @@
 /* styles.css */
-@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
-:root {
-    --primary: #3498db; /* Change this to your desired color */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    /* Remove default margin */
+}
+
+header {
+    height: 60px;
+    /* Fixed height for the header */
+}
+
+footer {
+    height: 40px;
+    /* Fixed height for the footer */
+}
+
+
+
+.content {
+    min-height: calc(100vh - 80px);
+    /* Adjust based on footer height */
 }
