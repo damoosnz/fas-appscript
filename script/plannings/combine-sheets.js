@@ -1,16 +1,17 @@
 function loadSheets() {
-    google.script.run.withSuccessHandler(function (sheetNames) {
-        var sheetsListDiv = document.getElementById('sheetsList');
-        sheetsListDiv.innerHTML = ''; // Clear the list before adding
-
-        sheetNames.forEach(function (name) {
-            sheetsListDiv.innerHTML += `
+    google.script.run
+        .withSuccessHandler(function (sheetNames) {
+            var sheetsListDiv = document.getElementById('sheetsList');
+            sheetsListDiv.innerHTML = ''; // Clear the list before adding
+            sheetNames.forEach(function (name) {
+                sheetsListDiv.innerHTML += `
           <label>
             <input type="checkbox" name="sheets" value="${name}">
             ${name}
           </label><br>`;
-        });
-    }).getSheetNames();
+            });
+        })
+        .getSheetNames();
 }
 
 // Function to handle the form submission
@@ -23,10 +24,12 @@ function submitSelection() {
     });
 
     // Call the server-side function to process selected sheets
-    google.script.run.processSelectedSheets(selectedSheets);
-
+    google.script.run
+    .withSuccessHandler(function () {
     // Close the dialog
     google.script.host.close();
+    })  
+    .processSelectedSheets(selectedSheets);
 }
 
 // Load the sheet names 
