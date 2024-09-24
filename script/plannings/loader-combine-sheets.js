@@ -32,10 +32,10 @@ async function loadModularContent() {
     console.log('script loading completed')
 
     // add event listeners
-    document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('submit-button').addEventListener('click', submitSelection);
-        document.getElementById('reset-button').addEventListener('click', resetSheet);
-    });
+    // document.addEventListener('DOMContentLoaded', () => {
+    //     document.getElementById('submit-button').addEventListener('click', submitSelection);
+    //     document.getElementById('reset-button').addEventListener('click', resetSheet);
+    // });
 
 
 
