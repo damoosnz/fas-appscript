@@ -29,7 +29,7 @@ function submitSelection() {
             // Close the dialog
             google.script.host.close();
         })
-        toggleHtml('start')
+        .toggleHtml('start')
         .processSelectedSheets(selectedSheets);
 }
 
