@@ -35,6 +35,7 @@ async function loadModularContent() {
 function loadScripts() {
     const script = document.createElement('script');
     script.src = 'script/plannings/combine-sheets.js'; // C:\BIMSC\GitHub Clones\fas-appscript\script\plannings\combine-sheets.js
+    script.type = 'module'
     document.body.appendChild(script); 
 }
 
