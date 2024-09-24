@@ -38,7 +38,7 @@ function submitSelection() {
 
 function resetSheet() {
 
-    showProgress()
+    showProgress('user-input')
     google.script.run
         .withSuccessHandler(function () {
             // Close the dialog
