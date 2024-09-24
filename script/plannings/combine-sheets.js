@@ -36,7 +36,7 @@ function submitSelection() {
         .processSelectedSheets(selectedSheets);
 }
 
-export function resetSheet() {
+function resetSheet() {
 
     showProgress()
     google.script.run
@@ -50,3 +50,12 @@ export function resetSheet() {
 
 // Load the sheet names 
 loadSheets();
+$('#submit-button').on('click', function (event) {
+    event.preventDefault(); // Prevent navigation
+    submitSelection();
+});
+
+$('#reset-button').on('click', function (event) {
+    event.preventDefault(); // Prevent navigation
+    resetSheet();
+});
