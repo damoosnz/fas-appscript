@@ -2,6 +2,8 @@ import { showProgress } from "../general/show-progess";
 
 function extractPlanningData() {
 
+    console.log('running extractPlanningData')
+
     showProgress()
 
     google.script.run
