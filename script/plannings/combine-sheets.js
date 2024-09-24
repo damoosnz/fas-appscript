@@ -34,6 +34,17 @@ function submitSelection() {
         .processSelectedSheets(selectedSheets);
 }
 
+function resetSheet() {
+    google.script.run
+        .withSuccessHandler(function () {
+            // Close the dialog
+            google.script.host.close();
+        })
+        .processSelectedSheets(resetSpreadSheet);
+
+
+}
+
 function toggleHtml(step) {
     if (step === 'start') {
         document.getElementById('progress').classList.remove('is-hidden');
