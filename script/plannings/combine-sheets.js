@@ -16,6 +16,8 @@ function loadSheets() {
 
 // Function to handle the form submission
 function submitSelection() {
+
+    toggleHtml('start')
     var selectedSheets = [];
     var checkboxes = document.querySelectorAll('input[name="sheets"]:checked');
 
@@ -29,7 +31,6 @@ function submitSelection() {
             // Close the dialog
             google.script.host.close();
         })
-        .toggleHtml('start')
         .processSelectedSheets(selectedSheets);
 }
 
