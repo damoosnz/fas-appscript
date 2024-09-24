@@ -37,6 +37,8 @@ function submitSelection() {
 }
 
 function resetSheet() {
+
+    showProgress()
     google.script.run
         .withSuccessHandler(function () {
             // Close the dialog

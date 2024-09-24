@@ -11,15 +11,15 @@ async function loadHTML(filePath) {
 // log the start of the script
 
 console.log('page init started')
-
 const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
+
 async function loadModularContent() {
 
     // Load your modular HTML files
     console.log('html loading started')
     await loadHTML(githubPagesUrl + 'html/global/header.html'); 
     await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets.html'); 
-    await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets-progress.html'); 
+    await loadHTML(githubPagesUrl + 'html/global/progress.html'); 
     await loadHTML(githubPagesUrl + 'html/global/footer.html'); 
     console.log('html loading completed')
     
@@ -27,6 +27,14 @@ async function loadModularContent() {
     console.log('script loading started')
     loadScripts();
     console.log('script loading completed')
+
+    // add event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('submit-button').addEventListener('click', submitSelection);
+        document.getElementById('reset-button').addEventListener('click', resetSheet);
+    });
+
+
 
     console.log('page init completed')
 }

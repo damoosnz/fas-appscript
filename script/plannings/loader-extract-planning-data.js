@@ -27,6 +27,9 @@ async function loadModularContent() {
     loadScripts();
     console.log('script loading completed')
 
+    // add event listeners
+    
+
     console.log('page init completed')
 }
 
