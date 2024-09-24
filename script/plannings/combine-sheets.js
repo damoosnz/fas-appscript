@@ -36,7 +36,7 @@ function submitSelection() {
         .processSelectedSheets(selectedSheets);
 }
 
-function resetSheet() {
+export function resetSheet() {
 
     showProgress()
     google.script.run
