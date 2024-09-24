@@ -19,6 +19,7 @@ async function loadModularContent() {
     console.log('html loading started')
     await loadHTML(githubPagesUrl + 'html/global/header.html'); 
     await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets.html'); 
+    await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets-progress.html'); 
     await loadHTML(githubPagesUrl + 'html/global/footer.html'); 
     console.log('html loading completed')
     

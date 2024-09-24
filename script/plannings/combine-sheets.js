@@ -25,12 +25,26 @@ function submitSelection() {
 
     // Call the server-side function to process selected sheets
     google.script.run
-    .withSuccessHandler(function () {
-    // Close the dialog
-    google.script.host.close();
-    })  
-    .processSelectedSheets(selectedSheets);
+        .withSuccessHandler(function () {
+            // Close the dialog
+            google.script.host.close();
+        })
+        toggleHtml('start')
+        .processSelectedSheets(selectedSheets);
 }
+
+function toggleHtml(step) {
+    if (step === 'start') {
+        document.getElementById('spinner').classList.remove('is-hidden');
+        document.getElementById('sheetsForm').classList.add('is-hidden');
+    }
+
+
+
+
+
+}
+
 
 // Load the sheet names 
 loadSheets();
