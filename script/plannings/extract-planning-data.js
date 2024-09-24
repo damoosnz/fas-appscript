@@ -1,4 +1,4 @@
-import { showProgress } from "../general/show-progess.js";
+import { showProgress } from "../general/show-progess";
 
 function extractPlanningData() {
 
