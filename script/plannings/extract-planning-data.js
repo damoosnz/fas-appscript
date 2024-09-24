@@ -1,4 +1,8 @@
-function showProgressSpinner() {
+import { showProgress } from "../general/show-progess.js";
+
+function extractPlanningData() {
+
+    showProgress()
 
     google.script.run
         .withSuccessHandler(function () {
@@ -9,4 +13,4 @@ function showProgressSpinner() {
 
 }
 
-showProgressSpinner()
+extractPlanningData()

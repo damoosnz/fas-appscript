@@ -1,3 +1,5 @@
+import { showProgress } from "../general/show-progess.js";
+
 function loadSheets() {
     google.script.run
         .withSuccessHandler(function (sheetNames) {
@@ -17,7 +19,7 @@ function loadSheets() {
 // Function to handle the form submission
 function submitSelection() {
 
-    toggleHtml('start')
+    showProgress('user-input')
     var selectedSheets = [];
     var checkboxes = document.querySelectorAll('input[name="sheets"]:checked');
 
@@ -44,19 +46,6 @@ function resetSheet() {
 
 
 }
-
-function toggleHtml(step) {
-    if (step === 'start') {
-        document.getElementById('progress').classList.remove('is-hidden');
-        document.getElementById('user-input').classList.add('is-hidden');
-    }
-
-
-
-
-
-}
-
 
 // Load the sheet names 
 loadSheets();
