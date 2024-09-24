@@ -1,4 +1,5 @@
 import jQuery from "https://cdn.skypack.dev/jquery";
+import { loadScripts } from "../general/load-scripts.js";
 
 // Inject HTML
 async function loadHTML(filePath) {
