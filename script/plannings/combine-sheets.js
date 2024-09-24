@@ -46,7 +46,6 @@ function resetSheet() {
         })
         .resetSpreadSheet(); //resetSpreadSheet
 
-
 }
 
 // Load the sheet names 

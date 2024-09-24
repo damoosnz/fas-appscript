@@ -24,22 +24,16 @@ async function loadModularContent() {
     
     // Load scripts after HTML content is added
     console.log('script loading started')
-    loadScripts();
+    loadScripts('script/plannings/extract-planning-data.js');
     console.log('script loading completed')
 
     // add event listeners
-    
+
 
     console.log('page init completed')
 }
 
-// Function to load additional scripts
-function loadScripts() {
-    const script = document.createElement('script');
-    script.src = 'script/plannings/extract-planning-data.js'; // C:\BIMSC\GitHub Clones\fas-appscript\script\plannings\combine-sheets.js
-    script.type = 'module'
-    document.body.appendChild(script); 
-}
+
 
 // Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', loadModularContent);
