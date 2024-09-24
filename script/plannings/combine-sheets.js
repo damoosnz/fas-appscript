@@ -40,7 +40,7 @@ function resetSheet() {
             // Close the dialog
             google.script.host.close();
         })
-        .processSelectedSheets(resetSpreadSheet);
+        .resetSpreadSheet(); //resetSpreadSheet
 
 
 }
