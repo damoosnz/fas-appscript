@@ -36,8 +36,8 @@ function submitSelection() {
 
 function toggleHtml(step) {
     if (step === 'start') {
-        document.getElementById('spinner').classList.remove('is-hidden');
-        document.getElementById('sheetsForm').classList.add('is-hidden');
+        document.getElementById('progress').classList.remove('is-hidden');
+        document.getElementById('user-input').classList.add('is-hidden');
     }
 
 
