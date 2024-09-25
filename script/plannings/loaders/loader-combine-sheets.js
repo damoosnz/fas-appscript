@@ -1,13 +1,6 @@
 import jQuery from "https://cdn.skypack.dev/jquery";
-import { loadScripts } from "../general/load-scripts.js";
-
-// Inject HTML
-async function loadHTML(filePath) {
-    const response = await fetch(filePath);
-    const html = await response.text();
-    console.log(filePath, html)
-    document.body.innerHTML += html; // Append the HTML
-}
+import { loadScripts } from "../../general/load-scripts.js";
+import { loadHTML } from "../../general/load-html.js";
 
 // log the start of the script
 
@@ -26,9 +19,7 @@ async function loadModularContent() {
     
     // Load scripts after HTML content is added
     console.log('script loading started')
-
     loadScripts('script/plannings/combine-sheets.js');
-
     console.log('script loading completed')
 
     console.log('page init completed')

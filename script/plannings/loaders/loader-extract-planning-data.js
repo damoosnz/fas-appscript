@@ -1,5 +1,6 @@
-import { loadScripts } from "../general/load-scripts.js";
-import { loadHTML } from "../general/load-html.js";
+import jQuery from "https://cdn.skypack.dev/jquery";
+import { loadScripts } from "../../general/load-scripts.js";
+import { loadHTML } from "../../general/load-html.js";
 
 // log the start of the script
 
@@ -17,11 +18,8 @@ async function loadModularContent() {
     
     // Load scripts after HTML content is added
     console.log('script loading started')
-    loadScripts('script/plannings/send-data-to-fas-post.js');
+    loadScripts('script/plannings/extract-planning-data.js'); //extract-planning-data.js
     console.log('script loading completed')
-
-    // add event listeners
-
 
     console.log('page init completed')
 }
