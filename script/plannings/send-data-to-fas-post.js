@@ -9,7 +9,7 @@ function sendDataToFasPost() {
 
     google.script.run
         .withSuccessHandler(function () {
-            $('#linkButton').text("Go to FAS Post Planning")
+            $('#linkUrl').text("Go to FAS Post Planning")
             $('#linkUrl').attr('href', 'https://docs.google.com/spreadsheets/d/1MTd4HeY2zX86c-QH6jhs8_hoNnw7pMT-1_h1CDpEplQ/edit?gid=0#gid=0');
             hideDivById('progress')
             showDivById('link')
