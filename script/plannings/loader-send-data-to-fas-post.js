@@ -17,7 +17,7 @@ async function loadModularContent() {
     
     // Load scripts after HTML content is added
     console.log('script loading started')
-    loadScripts('script/plannings/extract-planning-data.js');
+    loadScripts('script/plannings/send-data-to-fas-post.js');
     console.log('script loading completed')
 
     // add event listeners
