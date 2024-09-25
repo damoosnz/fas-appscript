@@ -11,7 +11,7 @@ function sendDataToFasPost() {
             // Close the dialog
             google.script.host.close();
         })
-        .sendToFasPostPlanning();
+        .sendToFasPostPlanning_1();
 
 }
 
