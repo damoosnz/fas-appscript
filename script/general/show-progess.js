@@ -17,3 +17,33 @@ export function showProgress(divToReplaceWithProgress = "") {
         }
     }
 }
+
+export function hideDivById(div_id) {
+    const myDiv = document.getElementById(div_id);  // Remove quotes around div_id
+    if (myDiv) {
+        // Check if the div contains the 'is-hidden' class
+        if (!myDiv.classList.contains('is-hidden')) {
+            myDiv.classList.add('is-hidden');
+            console.log("Class 'is-hidden' added from div:", div_id);
+        } else {
+            console.log("Div is not visible:", div_id);
+        }
+    } else {
+        console.error("Progress div not found");
+    }
+}
+
+export function showDivById(div_id) {
+    const myDiv = document.getElementById(div_id);
+    if (myDiv) {
+        // Check if the div contains the 'is-hidden' class
+        if (myDiv.classList.contains('is-hidden')) {
+            myDiv.classList.remove('is-hidden');
+            console.log("Class 'is-hidden' removed from div:", div_id);
+        } else {
+            console.log("Div is already visible:", div_id);
+        }
+    } else {
+        console.error("Div not found:", div_id);
+    }
+}
