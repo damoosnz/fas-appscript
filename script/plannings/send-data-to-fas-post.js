@@ -1,6 +1,6 @@
 import { showProgress } from "../general/show-progess.js";
 
-function sendDataToFasPost()() {
+function sendDataToFasPost() {
 
     console.log('running extractPlanningData')
 
