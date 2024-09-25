@@ -14,7 +14,10 @@ function sendDataToFasPost() {
             hideDivById('progress')
             showDivById('link')
             // Close the dialog
-            google.script.host.close();
+            $('#linkButton').on('click', function () {
+                google.script.host.close();  // This will close the dialog
+            });
+            // 
         })
         .sendToFasPostPlanningExe();
 
