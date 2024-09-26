@@ -10,7 +10,7 @@ async function loadModularContent() {
 
     // Load your modular HTML files
     console.log('html loading started')
-    const htmlEls = ['header', 'title', 'button', 'title', 'button', 'title', 'button','title', 'button' 'footer']
+    const htmlEls = ['header', 'title', 'button', 'title', 'button', 'title', 'button','title', 'button', 'footer']
     await loadHTML(htmlEls);
     $('.button-container').css('height', '100px');
 
