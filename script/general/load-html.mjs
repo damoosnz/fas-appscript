@@ -2,8 +2,6 @@
 
 export async function loadHTML(elements) {
 
-    var elements = ['header', 'title', 'button', 'title', 'button', 'title', 'button', 'footer']
-
     const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
     let html = '<div id="fas-container" class="container">'
     const elCount = {};

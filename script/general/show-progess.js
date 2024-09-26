@@ -19,7 +19,7 @@ export function showProgress(divToReplaceWithProgress = "") {
 }
 
 export function hideDivById(div_id) {
-    const myDiv = $('#fas-container').find(div_id); 
+    const myDiv = document.getElementById(div_id);
     if (myDiv) {
         // Check if the div contains the 'is-hidden' class
         if (!myDiv.classList.contains('is-hidden')) {

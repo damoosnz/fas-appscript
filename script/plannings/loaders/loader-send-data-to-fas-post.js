@@ -1,5 +1,6 @@
 import { loadScripts } from "../../general/load-scripts.js";
 import { loadHTML } from "../../general/load-html.mjs";
+import { showDivById, hideDivById } from "../../general/show-progess.js";
 
 // log the start of the script
 

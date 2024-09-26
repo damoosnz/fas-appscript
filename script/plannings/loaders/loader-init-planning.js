@@ -10,11 +10,11 @@ async function loadModularContent() {
 
     // Load your modular HTML files
     console.log('html loading started')
-    const htmlEls = ['header', 'title', 'button', 'title', 'button','title', 'button', 'footer']
+    const htmlEls = ['header', 'title', 'button', 'title', 'button', 'title', 'button', 'footer']
     await loadHTML(htmlEls);
- 
+
     console.log('html loading completed')
-    
+
     // Load scripts after HTML content is added
     console.log('script loading started')
     loadScripts('script/plannings/init-planning.js');
