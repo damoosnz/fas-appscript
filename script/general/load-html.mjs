@@ -17,6 +17,7 @@ export async function loadHTML(elements) {
         } else {
             elCount[el] = 1;
         }
+        console.log( elCount[el])
         htmlEl = htmlEl.replace('{{it}}', elCount[el])
         html += htmlEl
     }
