@@ -1,6 +1,7 @@
 import jQuery from "https://cdn.skypack.dev/jquery";
 import { loadScripts } from "../../general/load-scripts.js";
 import { loadHTML } from "../../general/load-html.js";
+import { hideDivById } from "../../general/show-progess.js";
 
 // log the start of the script
 
@@ -14,6 +15,8 @@ async function loadModularContent() {
     const htmlEls = ['header', 'plannings/combine-sheets','progress', 'footer'] 
     await loadHTML(htmlEls);
     console.log('html loading completed')
+
+    hideDivById('progress')
     
     // Load scripts after HTML content is added
     console.log('script loading started')
