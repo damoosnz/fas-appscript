@@ -1,4 +1,3 @@
-import { showDivById, showProgress } from "../general/show-progess.js";
 import { showDivById, hideDivById } from "../general/show-progess.js";
 
 function loadSheets() {
@@ -41,7 +40,8 @@ function submitSelection() {
 
 function resetSheet() {
 
-    showProgress('user-input')
+    hideDivById('user-input')
+    showDivById('progress')
     google.script.run
         .withSuccessHandler(function () {
             // Close the dialog
