@@ -7,7 +7,11 @@ export async function loadHTML(elements) {
     const elCount = {};
 
     for (var el of elements) {
-        const filePath = githubPagesUrl + `html/global/${el}.html`
+        let elRoot = ''
+        if (!el.includes('/')) {
+            elRoot= 'global/'            
+        }
+        const filePath = githubPagesUrl + `html/${elRoot}${el}.html`
         const response = await fetch(filePath);
         let htmlEl = await response.text();
         if (elCount[el]) {
