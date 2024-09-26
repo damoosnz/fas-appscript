@@ -5,7 +5,7 @@ import { loadHTML } from "../../general/load-html.mjs";
 
 console.log('page init started')
 
-const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
+
 async function loadModularContent() {
 
     // Load your modular HTML files

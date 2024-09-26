@@ -21,6 +21,6 @@ export async function loadHTML(elements) {
     }
     console.log(html + '</div>')
 
-    // $('#fas-container').html(html + '</div>')
+    $('#fas-container').html(html + '</div>')
 
 }
