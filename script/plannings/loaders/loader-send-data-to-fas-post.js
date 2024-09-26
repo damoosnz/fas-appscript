@@ -13,6 +13,7 @@ async function loadModularContent() {
     console.log('html loading started')
     const htmlEls = ['header', 'progress', 'button', 'footer']
     await loadHTML(htmlEls);
+    $('.button-container').css('height', '200px');
     console.log('html loading completed')
 
     hideDivById('button-1')
