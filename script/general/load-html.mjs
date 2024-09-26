@@ -16,7 +16,7 @@ export async function loadHTML(elements) {
             elCount[el] = 1;
         }
         console.log( elCount[el])
-        htmlEl = htmlEl.replace('{{it}}', elCount[el])
+        htmlEl = htmlEl.replace(/{{it}}/g, elCount[el]);
         html += htmlEl
     }
     console.log(html + '</div>')
