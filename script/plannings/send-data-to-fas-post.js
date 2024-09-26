@@ -10,7 +10,7 @@ function sendDataToFasPost() {
         .withSuccessHandler(function () {
             $('#linkButton').text("Go to FAS Post Planning")
             hideDivById('progress')
-            showDivById('link')
+            showDivById('button-1')
             // Close the dialog
             $('#linkButton').on('click', function () {
                 google.script.host.close();  // This will close the dialog
