@@ -1,5 +1,5 @@
 import { loadScripts } from "../../general/load-scripts.js";
-import { loadHTML } from "../../general/load-html.mjs";
+import { loadHTML } from "../../general/load-html.js";
 
 // log the start of the script
 
