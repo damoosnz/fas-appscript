@@ -2,6 +2,8 @@
 
 export async function loadHTML(elements) {
 
+    // ['header', 'title', 'button', 'title', 'button', 'title', 'button', 'footer']
+
     const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
     let html = '<div id="fas-container" class="container">'
     const elCount = {};
@@ -12,6 +14,7 @@ export async function loadHTML(elements) {
             elRoot= 'global/'            
         }
         const filePath = githubPagesUrl + `html/${elRoot}${el}.html`
+        console.log(filePath)
         const response = await fetch(filePath);
         let htmlEl = await response.text();
         if (elCount[el]) {
