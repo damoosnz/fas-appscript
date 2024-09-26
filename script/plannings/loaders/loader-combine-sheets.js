@@ -11,10 +11,9 @@ async function loadModularContent() {
 
     // Load your modular HTML files
     console.log('html loading started')
-    await loadHTML(githubPagesUrl + 'html/global/header.html'); 
-    await loadHTML(githubPagesUrl + 'html/plannings/combine-sheets.html'); 
-    await loadHTML(githubPagesUrl + 'html/global/progress.html'); 
-    await loadHTML(githubPagesUrl + 'html/global/footer.html'); 
+    const htmlEls = ['header', 'plannings/combine-sheets','progress', 'footer']
+    await loadHTML(htmlEls);
+
     console.log('html loading completed')
     
     // Load scripts after HTML content is added

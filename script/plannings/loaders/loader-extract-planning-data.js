@@ -11,11 +11,11 @@ async function loadModularContent() {
 
     // Load your modular HTML files
     console.log('html loading started')
-    await loadHTML(githubPagesUrl + 'html/global/header.html'); 
-    await loadHTML(githubPagesUrl + 'html/global/progress.html'); 
-    await loadHTML(githubPagesUrl + 'html/global/footer.html'); 
+    const htmlEls = ['header', 'progress', 'footer']
+    await loadHTML(htmlEls);
+
     console.log('html loading completed')
-    
+
     // Load scripts after HTML content is added
     console.log('script loading started')
     loadScripts('script/plannings/extract-planning-data.js'); //extract-planning-data.js
