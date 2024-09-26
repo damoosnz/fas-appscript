@@ -45,7 +45,7 @@ function initPlanning() {
         .withSuccessHandler(function () {
             // Close the dialog
         })
-        .sendToFasPostPlanning(); // to update to fas post to knack     
+        .sendPlanningToKnack(); // to update to fas post to knack     
     });
 
 }
