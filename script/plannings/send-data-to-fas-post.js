@@ -1,4 +1,3 @@
-import { showProgress } from "../general/show-progess.js";
 import { showDivById, hideDivById } from "../general/show-progess.js";
 
 function sendDataToFasPost() {
