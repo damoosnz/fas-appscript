@@ -11,6 +11,7 @@ export async function loadHTML(elements) {
         const htmlEl = await response.text();
         html += htmlEl
     }
+    console.log(html + '</div>')
 
     $('#fas-container').html(html + '</div>')
 
