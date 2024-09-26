@@ -22,7 +22,7 @@ async function loadModularContent() {
     
     // Load scripts after HTML content is added
     console.log('script loading started')
-    loadScripts('script/plannings/init-planning');
+    loadScripts('script/plannings/init-planning.js');
     console.log('script loading completed')
 
     // add event listeners
