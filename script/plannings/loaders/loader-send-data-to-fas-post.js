@@ -9,11 +9,13 @@ const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
 async function loadModularContent() {
 
     // Load your modular HTML files
+    const html = '<div id="fas-container" class="container">'
     console.log('html loading started')
-    await loadHTML(githubPagesUrl + 'html/global/header.html'); 
-    await loadHTML(githubPagesUrl + 'html/global/progress.html');
-    await loadHTML(githubPagesUrl + 'html/global/button.html');
-    await loadHTML(githubPagesUrl + 'html/global/footer.html'); 
+    html += await loadHTML(githubPagesUrl + 'html/global/header.html'); 
+    html += await loadHTML(githubPagesUrl + 'html/global/progress.html');
+    html += await loadHTML(githubPagesUrl + 'html/global/button.html');
+    html += await loadHTML(githubPagesUrl + 'html/global/footer.html'); 
+    ${'#fas-container'}.html(html + '</div>')
     console.log('html loading completed')
     
     // Load scripts after HTML content is added

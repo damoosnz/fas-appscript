@@ -4,9 +4,7 @@ export async function loadHTML(filePath, id = '') {
     const html = await response.text();
     console.log(filePath, html)
 
-    if(id) {
-        html.replace('{{id}}', id)
-    }
 
-    document.body.innerHTML += html; // Append the HTML
+    // document.body.innerHTML += html; // Append the HTML
+    return html
 }
