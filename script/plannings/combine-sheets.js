@@ -1,4 +1,5 @@
-import { showProgress } from "../general/show-progess.js";
+import { showDivById, showProgress } from "../general/show-progess.js";
+import { showDivById, hideDivById } from "../general/show-progess.js";
 
 function loadSheets() {
     google.script.run
@@ -19,7 +20,9 @@ function loadSheets() {
 // Function to handle the form submission
 function submitSelection() {
 
-    showProgress('user-input')
+    hideDivById('user-input')
+    showDivById('progress')
+
     var selectedSheets = [];
     var checkboxes = document.querySelectorAll('input[name="sheets"]:checked');
 
