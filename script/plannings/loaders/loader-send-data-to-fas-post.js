@@ -15,6 +15,8 @@ async function loadModularContent() {
     await loadHTML(htmlEls);
     console.log('html loading completed')
 
+    hideDivById('button-1')
+
     // Load scripts after HTML content is added
     console.log('script loading started')
     loadScripts('script/plannings/send-data-to-fas-post.js');
