@@ -1,11 +1,8 @@
-import { showDivById,  hideDivById } from "../general/show-progess.js";
+import { showDivById, hideDivById } from "../general/show-progess.js";
 
-function initPlannig() {
-
+function initPlanning() {
     showDivById('link')
-
-
 }
 
 
-intPlanning()
+initPlanning()
