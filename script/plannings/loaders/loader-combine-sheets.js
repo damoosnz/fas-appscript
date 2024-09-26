@@ -11,8 +11,7 @@ async function loadModularContent() {
 
     // Load your modular HTML files
     console.log('html loading started')
-    const htmlEls = ['header', 'plannings/combine-sheets','progress', 'footer']
-    await loadHTML(htmlEls);
+    const htmlEls = ['header', 'plannings/combine-sheets','progress', 'footer'] 
 
     console.log('html loading completed')
     
