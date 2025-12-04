@@ -47,5 +47,5 @@ async function LoadUtilitiesSideBar() {
 }
 
 // Call the function when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', LoadPlanningSideBar);
+document.addEventListener('DOMContentLoaded', LoadUtilitiesSideBar);
 
