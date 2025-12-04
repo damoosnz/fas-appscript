@@ -21,6 +21,7 @@ export const $html = {
         return $title
     },
     $progress: async () => await create$element(refs['progress']),
+    $modal: async (ref) => await create$element(ref),
 }
 
 // HELPER
