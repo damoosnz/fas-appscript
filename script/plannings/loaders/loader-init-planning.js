@@ -61,7 +61,7 @@ async function LoadPlanningSideBar() {
             .withSuccessHandler(function () { })
             .sendPlanningToKnack()   
     });
-    $cont.append($action3)
+    $cont.append($action4)
 
     // FOOTER
 
