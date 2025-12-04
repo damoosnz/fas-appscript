@@ -1,10 +1,5 @@
 import { $html } from "../../../html/generator/html-generator.js";
 
-// log the start of the script
-
-console.log('page init started')
-
-
 async function loadModularContent() {
 
     const $cont = $('#fas-container')
@@ -22,7 +17,7 @@ async function loadModularContent() {
     // CONTENT
     const contentRef = 'html/modal/combine-sheets.html'
     const $content = await $html.$modal(contentRef)
-    $cont.append($header)
+    $cont.append($content)
 
     const $list = $content.find('#sheetsList')
     loadSheets($list)
@@ -94,16 +89,4 @@ function resetSheet($list, $progress) {
         .resetSpreadSheet(); //resetSpreadSheet
 
 }
-
-// function getSheetNamesAsync() {
-//     return new Promise((resolve, reject) => {
-//         // 1. Configure google.script.run with the resolve/reject handlers
-//         google.script.run
-//             .withSuccessHandler(resolve) // On success, fulfill the Promise with the returned array
-//             .withFailureHandler(reject) // On failure, reject the Promise with the error
-
-//             // 2. Execute the server-side function
-//             .getSheetNames();
-//     });
-// }
 
