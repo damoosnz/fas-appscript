@@ -20,7 +20,7 @@ async function loadModularContent() {
     $cont.append($progress)
 
     // CONTENT
-    const contentRef = 'html\modal\combine-sheets.html'
+    const contentRef = 'html/modal/combine-sheets.html'
     const $content = await $html.$modal(contentRef)
     $cont.append($header)
 
