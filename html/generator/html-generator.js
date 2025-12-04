@@ -7,19 +7,19 @@ const refs = {
 }
 
 export const $html = {
-    $header: async () => await create$element(refs[header]),
-    $footer: async () => await create$element(refs[footer]),
+    $header: async () => await create$element(refs['header']),
+    $footer: async () => await create$element(refs['footer']),
     $button: async (label) => {
-        const $btn = await create$element(refs[button])
+        const $btn = await create$element(refs['button'])
         $btn.find('button').text(label)
         return $btn
     },
     $title: async (title) => {
-        const $title = await create$element(refs[title])
+        const $title = await create$element(refs['title'])
         $title.text(title)
         return $title
     },
-    $progress: async () => await create$element(refs[progress]),
+    $progress: async () => await create$element(refs['progress']),
 }
 
 async function create$element(ref) {
