@@ -63,6 +63,11 @@ async function LoadPlanningSideBar() {
     });
     $cont.append($action3)
 
+    // FOOTER
+
+    const $footer = await $html.$footer()
+    $cont.append($footer)
+
     // UI
     $('.button-container').css('height', '100px');
 
