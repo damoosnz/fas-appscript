@@ -21,7 +21,7 @@ async function loadModularContent() {
 
     // CONTENT
     const contentRef = 'html\modal\combine-sheets.html'
-    const $content = await $html.$content(contentRef)
+    const $content = await $html.$modal(contentRef)
     $cont.append($header)
 
     const $list = $content.find('#sheetsList')
