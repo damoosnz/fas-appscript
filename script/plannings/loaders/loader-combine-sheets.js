@@ -63,8 +63,10 @@ function submitSelection($list, $progress) {
     var $checkboxes = $list.find('input[name="sheets"]:checked');
     $checkboxes.each(function () {
         const $cb = $(this)
-        selectedSheets.push($cb.value);
+        selectedSheets.push($cb.val());
     });
+
+    console.log('selectedSheets', selectedSheets  )
 
     // Call the server-side function to process selected sheets
     google.script.run
