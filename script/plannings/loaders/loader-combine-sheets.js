@@ -61,8 +61,9 @@ function submitSelection($list, $progress) {
 
     var selectedSheets = [];
     var $checkboxes = $list.find('input[name="sheets"]:checked');
-    $checkboxes.forEach(function (checkbox) {
-        selectedSheets.push(checkbox.value);
+    $checkboxes.each(function () {
+        const $cb = $(this)
+        selectedSheets.push($cb.value);
     });
 
     // Call the server-side function to process selected sheets
