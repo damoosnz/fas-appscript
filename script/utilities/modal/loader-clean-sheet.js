@@ -11,13 +11,16 @@ async function loadModularContent() {
 
     // PROGRESS
     const $progress = await $html.$progress()
+    $progress.hide()
     $cont.append($progress)
 
     // CONTENT
     const $active = await $html.$button('Clean Active Sheet')
+    $active.css({ margin: '20px 0' });
     $cont.append($active)
 
     const $all = await $html.$button('Clean All Sheet')
+    $all.css({ margin: '20px 0' });
     $cont.append($all)
 
     $active.on('click', () => cleanActiveSheet($progress, $active, $all))
