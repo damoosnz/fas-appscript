@@ -22,8 +22,8 @@ async function loadModularContent() {
     const $list = $content.find('#sheetsList')
     loadSheets($list)
 
-    const $submit = $content.find('#submit-button').on('click',($list, $progress) =>  submitSelection($list, $progress))
-    const $reset = $content.find('#reset-button').on('click',($list, $progress) =>  resetSheet($list, $progress))
+    const $submit = $content.find('#submit-button').on('click', () => submitSelection($list, $progress))
+    const $reset = $content.find('#reset-button').on('click', () => resetSheet($list, $progress))
 
     // FOOTER
 
