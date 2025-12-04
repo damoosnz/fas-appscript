@@ -1,30 +1,36 @@
-import jQuery from "https://cdn.skypack.dev/jquery";
-import { loadScripts } from "../../general/load-scripts.js";
-import { loadHTML } from "../../general/load-html.js";
+import { $html } from "../../../html/generator/html-generator.js"
 
-// log the start of the script
-
-console.log('page init started')
-
-const githubPagesUrl = 'https://damoosnz.github.io/fas-appscript/'
 async function loadModularContent() {
 
-    // Load your modular HTML files
-    console.log('html loading started')
-    const htmlEls = ['header', 'progress', 'footer']
-    await loadHTML(htmlEls);
+    const $cont = $('#fas-container')
 
-    console.log('html loading completed')
+    // HEADER
 
-    // Load scripts after HTML content is added
-    console.log('script loading started')
-    loadScripts('script/plannings/extract-planning-data.js'); //extract-planning-data.js
-    console.log('script loading completed')
+    const $header = await $html.$header()
+    $cont.append($header)
 
-    console.log('page init completed')
+    // PROGRESS
+    const $progress = await $html.$progress()
+    $cont.append($progress)
+
+    // FOOTER
+
+    const $footer = await $html.$footer()
+    $cont.append($footer)
+
+    extractPlanningData()
+
 }
 
 
 
 // Call the function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', loadModularContent);
+
+// EVENTS
+
+function extractPlanningData() {
+    google.script.run
+        .withSuccessHandler(function () { google.script.host.close() })
+        .createFasToPostTable();
+}

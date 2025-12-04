@@ -36,7 +36,6 @@ async function loadModularContent() {
 document.addEventListener('DOMContentLoaded', loadModularContent);
 
 // EVENTS
-
 function loadSheets($list) {
     google.script.run
         .withSuccessHandler(function (sheetNames) {
@@ -61,19 +60,15 @@ function submitSelection($list, $progress) {
     $progress.show()
 
     var selectedSheets = [];
-    var $checkboxes = document.querySelectorAll('input[name="sheets"]:checked');
-
+    var $checkboxes = $('input[name="sheets"]:checked');
     $checkboxes.forEach(function (checkbox) {
         selectedSheets.push(checkbox.value);
     });
 
     // Call the server-side function to process selected sheets
     google.script.run
-        .withSuccessHandler(function () {
-            // Close the dialog
-            google.script.host.close();
-        })
-        .processSelectedSheets(selectedSheets);
+        .withSuccessHandler(function () { google.script.host.close() })
+        .processSelectedSheets(selectedSheets)
 }
 
 function resetSheet($list, $progress) {
@@ -82,11 +77,8 @@ function resetSheet($list, $progress) {
     $progress.show()
 
     google.script.run
-        .withSuccessHandler(function () {
-            // Close the dialog
-            google.script.host.close();
-        })
-        .resetSpreadSheet(); //resetSpreadSheet
+        .withSuccessHandler(function () { google.script.host.close() })
+        .resetSpreadSheet()
 
 }
 
