@@ -60,7 +60,7 @@ function submitSelection($list, $progress) {
     $progress.show()
 
     var selectedSheets = [];
-    var $checkboxes = $('input[name="sheets"]:checked');
+    var $checkboxes = $list.find('input[name="sheets"]:checked');
     $checkboxes.forEach(function (checkbox) {
         selectedSheets.push(checkbox.value);
     });
