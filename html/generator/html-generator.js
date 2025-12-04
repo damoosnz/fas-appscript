@@ -24,7 +24,7 @@ export const $html = {
 
 async function create$element(ref) {
     // 1. Fetch the HTML content as a Response object
-    const response = await fetch(refs[ref]);
+    const response = await fetch(ref);
     // 2. Extract the plain text (HTML string) from the response
     const htmlString = await response.text();
     // 3. Create and return the jQuery element
