@@ -21,7 +21,7 @@ async function loadModularContent() {
     $cont.append($content)
 
     const $list = $content.find('#sheetsList')
-    loadSheets($list)
+    loadSheets($list, $progress)
 
     const $delete = $content.find('#delete-button').on('click', () => deleteSheets($list, $progress))
     const $hide = $content.find('#hide-button').on('click', () => hideSheets($list, $progress))
