@@ -12,7 +12,7 @@ async function LoadPlanningSideBar() {
     const $step1 = await $html.$title("Step 1")
     $cont.append($step1)
 
-    const $action1 = await $html.$title("Combine Sheets")
+    const $action1 = await $html.$button("Combine Sheets")
     $action1.on('click', function (event) {
         event.preventDefault(); // Prevent navigation
         google.script.run
@@ -26,7 +26,7 @@ async function LoadPlanningSideBar() {
     const $step2 = await $html.$title("Step 2")
     $cont.append($step2)
 
-    const $action2 = await $html.$title("Extract Data")
+    const $action2 = await $html.$button("Extract Data")
     $action2.on('click', function (event) {
         event.preventDefault(); // Prevent navigation
         google.script.run
@@ -40,7 +40,7 @@ async function LoadPlanningSideBar() {
     const $step3 = await $html.$title("Step 3")
     $cont.append($step3)
 
-    const $action3 = await $html.$title("Send to Fas Post")
+    const $action3 = await $html.$button("Send to Fas Post")
     $action3.on('click', function (event) {
         event.preventDefault(); // Prevent navigation
         google.script.run
@@ -54,7 +54,7 @@ async function LoadPlanningSideBar() {
     const $step4 = await $html.$title("Step 4")
     $cont.append($step4)
 
-    const $action4 = await $html.$title("Send to Knack")
+    const $action4 = await $html.$button("Send to Knack")
     $action4.on('click', function (event) {
         event.preventDefault(); // Prevent navigation
         google.script.run
