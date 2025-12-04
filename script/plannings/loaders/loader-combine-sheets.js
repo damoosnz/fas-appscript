@@ -36,7 +36,11 @@ async function loadModularContent() {
 document.addEventListener('DOMContentLoaded', loadModularContent);
 
 // EVENTS
-function loadSheets($list) {
+function loadSheets($list, $progress) {
+
+    $list.hide()
+    $progress.show()
+
     google.script.run
         .withSuccessHandler(function (sheetNames) {
             for (const name of sheetNames) {
@@ -51,6 +55,9 @@ function loadSheets($list) {
             }
         })
         .getSheetNames();
+
+    $list.show()
+    $progress.hide()
 }
 
 // Function to handle the form submission
@@ -66,7 +73,7 @@ function submitSelection($list, $progress) {
         selectedSheets.push($cb.val());
     });
 
-    console.log('selectedSheets', selectedSheets  )
+    console.log('selectedSheets', selectedSheets)
 
     // Call the server-side function to process selected sheets
     google.script.run
