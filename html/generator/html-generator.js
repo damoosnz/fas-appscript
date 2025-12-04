@@ -1,10 +1,11 @@
 const refs = {
-    header: 'html\global\header.html',
-    footer: 'html\global\footer.html',
-    title: 'html\global\title.html',
-    button: 'html\global\button.html',
-    progress: 'html\global\progress.html',
+    header: 'html/global/header.html',
+    footer: 'html/global/footer.html',
+    title: 'html/global/title.html',
+    button: 'html/global/button.html',
+    progress: 'html/global/progress.html',
 }
+
 
 export const $html = {
     $header: async () => await create$element(refs['header']),
@@ -21,6 +22,8 @@ export const $html = {
     },
     $progress: async () => await create$element(refs['progress']),
 }
+
+// HELPER
 
 async function create$element(ref) {
     // 1. Fetch the HTML content as a Response object
