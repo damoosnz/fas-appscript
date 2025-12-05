@@ -52,19 +52,21 @@ function loadSheets($list, $progress) {
     $progress.show()
 
     google.script.run
-        .withSuccessHandler(function (sheetNames) {
-            for (const name of sheetNames) {
+        .withSuccessHandler(function (sheetsInfo) {
+            for (const si of sheetsInfo) {
+                const vis = si.vis === true ? '(hidden)' : ''
+                const name = si.name
                 const $cont = $('<div>').appendTo($list)
                 const $input = $(`
                         <label for="sheet-checkbox-${name}">
                             <input type="checkbox" id="sheet-checkbox-${name}" name="sheets" value="${name}">
-                            ${name}
+                            ${name} ${vis}
                         </label>
                     `)
                     .appendTo($cont)
             }
         })
-        .getSheetNames();
+        .getSheetInfo();
 
     $list.show()
     $progress.hide()
